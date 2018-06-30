@@ -10,16 +10,18 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+  
     <style>
         .arrange{
             float:left;
             padding:0.5rem;
         }
         .spacing{
+            
             padding:0.5rem;
-            margin:0.2rem;
+            margin:0.5rem;
         }
+       
     </style>
 </head>
 <body>
@@ -27,10 +29,11 @@
     <section id="animal-list">
        
     </section>
+
     <div class="row">
         <div class="col col-lg-9">
         <div id="giphy-list">
-            
+      
         </div>
         </div>
         <div class="col col-lg-3">
@@ -40,13 +43,14 @@
                     <label for="search">Enter Animal</label>
                     <input type="text" class="form-control" id="user-input" placeholder="pig">
                     </div>
-                <button type="submit" class="btn btn-primary" id="display">Submit</button>
-                </form>      
+                    <!-- <button type="submit" class="btn btn-primary" id="display">Submit</button> -->
+                </form>    
+                <button class="btn btn-primary" id="submit_button">Submit</button>  
             </div>
         </div>
     </div>
    
 </div>
-
+<script src="main.js"></script>
 </body>
 </html>
