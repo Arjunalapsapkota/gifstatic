@@ -50,8 +50,11 @@ $(document).ready(function()
       $("#animal-list").append(animal_button);
       $("#user-input").val("");
       getImages(animal);
-            
-      $(".giphy").on("click", function()
+         
+    });  
+      //pausing Gif 
+      //************************************************ */
+      function playGif()
         {
           var state = $(this).attr("data-state");         
           if (state === "still") 
@@ -64,12 +67,16 @@ $(document).ready(function()
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state", "still");
           }
-        });
-        //detecting dynamic-button press and displaying respective images  
-        $(".spacing").on("click", function() 
+        }
+        
+      //*************************************************** */
+      //detecting dynamic-button press and displaying respective images  
+      function detectPress()
         {
-          var animal=$(this).text();
-          getImages(animal);
-        });
-      });
+        var animal=$(this).text();
+        getImages(animal);
+        }
+       
+      $(document).on("click", ".giphy", playGif);
+      $(document).on("click", ".spacing", detectPress);
 });
