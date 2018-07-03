@@ -51,10 +51,17 @@ $(document).ready(function()
       $("#user-input").val("");
       getImages(animal);
          
+<<<<<<< HEAD
     });  
       //pausing Gif 
       //************************************************ */
       function playGif()
+=======
+      
+      //pausing Gif 
+      //************************************************ */
+      $(".giphy").on("click", function()
+>>>>>>> a86f50aed94e5e1494c81f5db8b55ada977e0328
         {
           var state = $(this).attr("data-state");         
           if (state === "still") 
@@ -67,6 +74,7 @@ $(document).ready(function()
             $(this).attr("src", $(this).attr("data-still"));
             $(this).attr("data-state", "still");
           }
+<<<<<<< HEAD
         }
         
       //*************************************************** */
@@ -79,4 +87,15 @@ $(document).ready(function()
        
       $(document).on("click", ".giphy", playGif);
       $(document).on("click", ".spacing", detectPress);
+=======
+        });
+      //*************************************************** */
+      //detecting dynamic-button press and displaying respective images  
+      $(".spacing").on("click", function() 
+        {
+        var animal=$(this).text();
+        getImages(animal);
+        });
+      });  
+>>>>>>> a86f50aed94e5e1494c81f5db8b55ada977e0328
 });
